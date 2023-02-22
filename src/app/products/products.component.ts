@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from './products.service';
 import { Observable } from 'rxjs';
 import { Product } from './product.interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -13,7 +14,7 @@ export class ProductsComponent implements OnInit {
     Product[]
   > = this.productsService.getProducts();
 
-  constructor(private readonly productsService: ProductsService) {}
+  constructor(private readonly productsService: ProductsService, private router: Router) {}
 
   ngOnInit(): void {}
 }
