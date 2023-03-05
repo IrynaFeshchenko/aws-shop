@@ -7,9 +7,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { CartCountControlsModule } from '../core/cart-count-controls/cart-count-controls.module';
+import { ProductInfoComponent } from './product-info/product-info.component';
 
 @NgModule({
-  declarations: [ProductsComponent, ProductItemComponent],
+  declarations: [ProductsComponent, ProductItemComponent, ProductInfoComponent],
   imports: [
     CommonModule,
     MatCardModule,
