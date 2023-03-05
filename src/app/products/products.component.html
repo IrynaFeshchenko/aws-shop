@@ -3,6 +3,7 @@
     *ngFor="let product of products$ | async; let i = index"
     [product]="product"
     [index]="i"
+    (click)="routeToProductPage($event, product.id)"
   >
   </app-product-item>
 </main>
