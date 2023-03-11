@@ -1,7 +1,7 @@
 <mat-card>
   <div mat-card-image class="img-container">
     <div class="img-container__inner">
-      <img src="https://source.unsplash.com/random?sig={{ index }}" alt="" />
+      <img src="{{ product.imgsrc }}" alt="" />
     </div>
   </div>
 
@@ -15,7 +15,7 @@
     <p>{{ product.price | number: "1.2-2" | currency }}</p>
   </mat-card-content>
 
-  <mat-card-actions>
+  <mat-card-actions (click)="$event.stopPropagation()">
     <!-- Add to cart btn -->
     <button
       #cartBtn
